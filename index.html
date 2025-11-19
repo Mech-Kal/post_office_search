@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Office Application</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>Post Office Application.</h1>
+        <p>This Application Allows you to extract information about the nearest Post Offices, based on your location.</p>
+        <div id="initial-screen">
+            <p>Your Current IP Address is <span id="ip-display">Loading...</span></p>
+            <button id="get-started-btn" disabled>Get Started</button>
+        </div>
+    </header>
+
+    <main id="info-screen" style="display: none;">
+        <section id="location-details">
+            <p>IP Address: <span id="ip-address-val"></span> | City: <span id="city-val"></span> | Organisation: <span id="org-val"></span></p>
+            <p>Lat: <span id="lat-val"></span> | Long: <span id="long-val"></span> | Region: <span id="region-val"></span></p>
+        </section>
+
+        <section id="map-section">
+            <h2>Your Current Location</h2>
+            <div id="map-container">
+                </div>
+        </section>
+        
+        <section id="time-section">
+            <h2>More Information About You</h2>
+            <p>Time Zone: <span id="timezone-val"></span></p>
+            <p>Date And Time: <span id="datetime-val"></span></p>
+            <p>Pincode: <span id="pincode-val"></span></p>
+            <p>Message: <span id="message-val"></span></p>
+        </section>
+
+        <section id="post-office-section">
+            <h2>Post Offices Near You</h2>
+            <input type="text" id="search-input" placeholder="Search By Name or Branch Office">
+            <div id="post-office-list">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
